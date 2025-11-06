@@ -1,4 +1,6 @@
-venv/
 .env
-__pycache__/
 user_lang.json
+bot_stats.json
+service_requests.json
+__pycache__/
+*.pyc
