@@ -1,0 +1,4 @@
+venv/
+.env
+__pycache__/
+user_lang.json
