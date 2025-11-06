@@ -1,0 +1,12 @@
+python-telegram-bot==20.7
+python-dotenv==1.0.0
+```
+
+### 3. **.gitignore**
+```
+.env
+user_lang.json
+bot_stats.json
+service_requests.json
+__pycache__/
+*.pyc
