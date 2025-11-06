@@ -481,8 +481,7 @@ TEXTS = {
               "Нужна услуга перевода\n"
               "2-3 дня, деловая встреча\n"
               "+998 90 123 45 67",
-        "en": "📝 <b>
-                "en": "📝 <b>Send Request</b>\n\n"
+        "en": "📝 <b>Send Request</b>\n\n"
               "Please provide:\n"
               "• Service type\n"
               "• Details\n"
