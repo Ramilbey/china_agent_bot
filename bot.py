@@ -51,9 +51,85 @@ bot_stats = load_json(STATS_FILE, {
 })
 service_requests = load_json(REQUESTS_FILE, [])
 
-# TEXTS - Using HTML parse mode to avoid Markdown issues
+# TEXTS dictionary - COMPLETE VERSION
 TEXTS = {
-    # ... (your existing TEXTS dictionary remains the same) ...
+    "start": {
+        "en": "👋 <b>Welcome to China Agent Bot!</b>\n\n🇨🇳 Your reliable partner for business in China\n\nPlease select your language:",
+        "ru": "👋 <b>Добро пожаловать в China Agent Bot!</b>\n\n🇨🇳 Ваш надежный партнер для бизнеса в Китае\n\nПожалуйста, выберите язык:",
+        "uz": "👋 <b>China Agent Botga xush kelibsiz!</b>\n\n🇨🇳 Xitoydagi biznesingiz uchun ishonchli hamkor\n\nIltimos, tilni tanlang:"
+    },
+    "lang_changed": {
+        "en": "✅ Language changed to English\n\nUse the menu below to navigate:",
+        "ru": "✅ Язык изменен на русский\n\nИспользуйте меню ниже для навигации:",
+        "uz": "✅ Til o'zbek tiliga o'zgartirildi\n\nQuyidagi menyudan foydalaning:"
+    },
+    "menu": {
+        "en": [["🛠 Services", "📞 Contact"], ["💼 Pricing", "📝 Send Request"], ["🌏 Language", "ℹ️ About", "❓ Help"]],
+        "ru": [["🛠 Услуги", "📞 Контакт"], ["💼 Цены", "📝 Отправить запрос"], ["🌏 Язык", "ℹ️ О боте", "❓ Помощь"]],
+        "uz": [["🛠 Xizmatlar", "📞 Aloqa"], ["💼 Narxlar", "📝 So'rov yuborish"], ["🌏 Til", "ℹ️ Haqida", "❓ Yordam"]]
+    },
+    "services_intro": {
+        "en": "🛠 <b>Our Services:</b>\n\nSelect a service to learn more:",
+        "ru": "🛠 <b>Наши Услуги:</b>\n\nВыберите услугу для подробностей:",
+        "uz": "🛠 <b>Bizning Xizmatlar:</b>\n\nBatafsil ma'lumot olish uchun xizmatni tanlang:"
+    },
+    "service_details": {
+        "translation": {
+            "en": "🔤 <b>Translation Services</b>\n\n✅ Documents\n✅ Contracts\n✅ Business meetings\n✅ Live interpretation\n\n📞 Contact us for pricing",
+            "ru": "🔤 <b>Услуги Перевода</b>\n\n✅ Документы\n✅ Контракты\n✅ Деловые встречи\n✅ Синхронный перевод\n\n📞 Свяжитесь для уточнения цен",
+            "uz": "🔤 <b>Tarjima Xizmatlari</b>\n\n✅ Hujjatlar\n✅ Shartnomalar\n✅ Biznes uchrashuvlar\n✅ Jonli tarjima\n\n📞 Narxlar uchun bog'laning"
+        },
+        "sourcing": {
+            "en": "🔍 <b>Product Sourcing</b>\n\n✅ Find manufacturers\n✅ Quality control\n✅ Price negotiation\n✅ Sample ordering\n\n📞 Let's find your perfect supplier!",
+            "ru": "🔍 <b>Поиск Товаров</b>\n\n✅ Поиск производителей\n✅ Контроль качества\n✅ Переговоры о цене\n✅ Заказ образцов\n\n📞 Найдем идеального поставщика!",
+            "uz": "🔍 <b>Mahsulot Qidirish</b>\n\n✅ Ishlab chiqaruvchi topish\n✅ Sifat nazorati\n✅ Narx muzokara\n✅ Namuna buyurtma\n\n📞 Eng yaxshi yetkazib beruvchini topamiz!"
+        },
+        "admission": {
+            "en": "🎓 <b>University Admission</b>\n\n✅ Top universities\n✅ Document preparation\n✅ Visa assistance\n✅ Scholarship guidance\n\n📞 Start your education journey!",
+            "ru": "🎓 <b>Поступление в Университет</b>\n\n✅ Лучшие университеты\n✅ Подготовка документов\n✅ Помощь с визой\n✅ Стипендии\n\n📞 Начните свое образование!",
+            "uz": "🎓 <b>Universitetga Kirish</b>\n\n✅ Top universitetlar\n✅ Hujjat tayyorlash\n✅ Viza yordami\n✅ Grant yo'nalishi\n\n📞 Ta'lim sayohatingizni boshlang!"
+        },
+        "canton": {
+            "en": "🏢 <b>Canton Fair Support</b>\n\n✅ Registration help\n✅ Booth booking\n✅ Interpretation\n✅ Logistics\n\n📞 Make the most of the fair!",
+            "ru": "🏢 <b>Кантонская Ярмарка</b>\n\n✅ Помощь с регистрацией\n✅ Бронирование стендов\n✅ Перевод\n✅ Логистика\n\n📞 Получите максимум от ярмарки!",
+            "uz": "🏢 <b>Kanton Yarmarkasi</b>\n\n✅ Ro'yxatdan o'tish\n✅ Stend bron qilish\n✅ Tarjimon\n✅ Logistika\n\n📞 Yarmarkadan maksimal foydalaning!"
+        },
+        "logistics": {
+            "en": "🚚 <b>Logistics Services</b>\n\n✅ Air/Sea freight\n✅ Customs clearance\n✅ Warehousing\n✅ Door-to-door delivery\n\n📞 Safe and fast shipping!",
+            "ru": "🚚 <b>Логистические Услуги</b>\n\n✅ Авиа/морские перевозки\n✅ Таможенное оформление\n✅ Складирование\n✅ Доставка до двери\n\n📞 Безопасная и быстрая доставка!",
+            "uz": "🚚 <b>Logistika Xizmatlari</b>\n\n✅ Havo/Dengiz tashish\n✅ Bojxona rasmiylashtiruvi\n✅ Omborxona\n✅ Uyigacha yetkazish\n\n📞 Xavfsiz va tez yetkazib berish!"
+        }
+    },
+    "contact": {
+        "en": "📞 <b>Contact Us:</b>\n\n📱 Phone: +86 123 456 7890\n✉️ Email: info@chinaagent.com\n💬 WeChat: ChinaAgent\n\n🕐 Working hours: 9:00-18:00 (Beijing Time)",
+        "ru": "📞 <b>Контакты:</b>\n\n📱 Телефон: +86 123 456 7890\n✉️ Email: info@chinaagent.com\n💬 WeChat: ChinaAgent\n\n🕐 Рабочие часы: 9:00-18:00 (Пекинское время)",
+        "uz": "📞 <b>Aloqa:</b>\n\n📱 Telefon: +86 123 456 7890\n✉️ Email: info@chinaagent.com\n💬 WeChat: ChinaAgent\n\n🕐 Ish vaqti: 9:00-18:00 (Pekin vaqti)"
+    },
+    "pricing": {
+        "en": "💼 <b>Our Pricing:</b>\n\n🔤 Translation: From $50\n🔍 Sourcing: 5% of order\n🎓 Admission: $500\n🏢 Canton Fair: Custom\n🚚 Logistics: Based on weight\n\n📝 Send request for detailed quote",
+        "ru": "💼 <b>Цены:</b>\n\n🔤 Перевод: От $50\n🔍 Поиск: 5% от заказа\n🎓 Поступление: $500\n🏢 Кантон: Индивидуально\n🚚 Логистика: По весу\n\n📝 Отправьте запрос для детальной оценки",
+        "uz": "💼 <b>Narxlar:</b>\n\n🔤 Tarjima: $50 dan\n🔍 Qidirish: Buyurtmaning 5%\n🎓 Kirish: $500\n🏢 Kanton: Maxsus\n🚚 Logistika: Og'irlikka qarab\n\n📝 Batafsil narx uchun so'rov yuboring"
+    },
+    "about": {
+        "en": "ℹ️ <b>About China Agent Bot</b>\n\n🇨🇳 We are your trusted partner for all business activities in China.\n\n✅ 10+ years experience\n✅ 1000+ satisfied clients\n✅ Professional team\n✅ 24/7 support\n\n🎯 Making China business easy!",
+        "ru": "ℹ️ <b>О China Agent Bot</b>\n\n🇨🇳 Мы - ваш надежный партнер для бизнеса в Китае.\n\n✅ 10+ лет опыта\n✅ 1000+ довольных клиентов\n✅ Профессиональная команда\n✅ Поддержка 24/7\n\n🎯 Делаем бизнес с Китаем легким!",
+        "uz": "ℹ️ <b>China Agent Bot Haqida</b>\n\n🇨🇳 Biz Xitoydagi biznes uchun ishonchli hamkoringizmiz.\n\n✅ 10+ yil tajriba\n✅ 1000+ mamnun mijozlar\n✅ Professional jamoa\n✅ 24/7 qo'llab-quvvatlash\n\n🎯 Xitoy bilan biznesni oson qilamiz!"
+    },
+    "help": {
+        "en": "❓ <b>Help</b>\n\n<b>Commands:</b>\n/start - Restart bot\n/menu - Main menu\n/help - This message\n/contact - Contact info\n/pricing - Our prices\n/about - About us\n\n<b>Tips:</b>\n• Use menu buttons for navigation\n• Send requests anytime\n• Change language in settings",
+        "ru": "❓ <b>Помощь</b>\n\n<b>Команды:</b>\n/start - Перезапуск\n/menu - Главное меню\n/help - Это сообщение\n/contact - Контакты\n/pricing - Цены\n/about - О нас\n\n<b>Советы:</b>\n• Используйте кнопки меню\n• Отправляйте запросы в любое время\n• Меняйте язык в настройках",
+        "uz": "❓ <b>Yordam</b>\n\n<b>Buyruqlar:</b>\n/start - Qayta boshlash\n/menu - Asosiy menyu\n/help - Bu xabar\n/contact - Aloqa\n/pricing - Narxlar\n/about - Biz haqimizda\n\n<b>Maslahatlar:</b>\n• Menyu tugmalaridan foydalaning\n• Istalgan vaqtda so'rov yuboring\n• Sozlamalarda tilni o'zgartiring"
+    },
+    "request_prompt": {
+        "en": "📝 <b>Send Your Request</b>\n\nPlease describe your needs in detail:\n• Service type\n• Requirements\n• Budget (if applicable)\n• Timeline\n\nWe'll respond within 24 hours!",
+        "ru": "📝 <b>Отправить Запрос</b>\n\nОпишите подробно ваши потребности:\n• Тип услуги\n• Требования\n• Бюджет (если есть)\n• Сроки\n\nОтветим в течение 24 часов!",
+        "uz": "📝 <b>So'rov Yuborish</b>\n\nEhtiyojlaringizni batafsil tasvirlab bering:\n• Xizmat turi\n• Talablar\n• Byudjet (agar mavjud bo'lsa)\n• Muddat\n\n24 soat ichida javob beramiz!"
+    },
+    "request_received": {
+        "en": "✅ <b>Request Received!</b>\n\nThank you! Our team will contact you within 24 hours.\n\n📞 For urgent matters, call us directly.",
+        "ru": "✅ <b>Запрос Получен!</b>\n\nСпасибо! Наша команда свяжется с вами в течение 24 часов.\n\n📞 По срочным вопросам звоните напрямую.",
+        "uz": "✅ <b>So'rov Qabul Qilindi!</b>\n\nRahmat! Jamoamiz 24 soat ichida siz bilan bog'lanadi.\n\n📞 Shoshilinch holatlarda to'g'ridan-to'g'ri qo'ng'iroq qiling."
+    }
 }
 
 LANG_BUTTONS = [["🇺🇿 O'zbek", "🇷🇺 Русский", "🇬🇧 English"]]
@@ -318,7 +394,7 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
     logger.info("🤖 China Agent Bot is running...")
-    app.run_polling()
+      app.run_polling(drop_pending_updates=True)
 
 if __name__ == "__main__":
     main()
