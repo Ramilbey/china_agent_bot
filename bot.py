@@ -252,7 +252,7 @@ async def handle_service_selection(update: Update, context: ContextTypes.DEFAULT
     service_key = service_mapping[lang].get(text)
     
     if service_key == "back":
-    await update.message.reply_text("📋 Main menu", reply_markup=get_menu_markup(lang))
+        await update.message.reply_text("📋 Main menu", reply_markup=get_menu_markup(lang))
 
     elif service_key in TEXTS["service_details"]:
         if service_key == "admission":
