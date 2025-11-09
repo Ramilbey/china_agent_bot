@@ -393,8 +393,17 @@ def main():
     app.add_handler(request_handler)
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-    logger.info("🤖 China Agent Bot is running...")
-    app.run_polling(drop_pending_updates=True)
+    logger.info("🤖 China Agent Bot is running on webhook mode...")
+
+    PORT = int(os.environ.get("PORT", 10000))
+    WEBHOOK_URL = os.environ.get("WEBHOOK_URL")
+
+    app.run_webhook(
+        listen="0.0.0.0",
+        port=PORT,
+        url_path="webhook",
+        webhook_url=f"{WEBHOOK_URL}/webhook"
+    )
 
 if __name__ == "__main__":
     main()
