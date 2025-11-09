@@ -111,9 +111,9 @@ TEXTS = {
         "uz": "💼 <b>Narxlar:</b>\n\n🔤 Tarjima: $50 dan\n🔍 Qidirish: Buyurtmaning 5%\n🎓 Kirish: $500\n🏢 Kanton: Maxsus\n🚚 Logistika: Og'irlikka qarab\n\n📝 Batafsil narx uchun so'rov yuboring"
     },
     "about": {
-        "en": "ℹ️ <b>About China Agent Bot</b>\n\n🇨🇳 We are your trusted partner for all business activities in China.\n\n✅ 10+ years experience\n✅ 1000+ satisfied clients\n✅ Professional team\n✅ 24/7 support\n\n🎯 Making China business easy!",
-        "ru": "ℹ️ <b>О China Agent Bot</b>\n\n🇨🇳 Мы - ваш надежный партнер для бизнеса в Китае.\n\n✅ 10+ лет опыта\n✅ 1000+ довольных клиентов\n✅ Профессиональная команда\n✅ Поддержка 24/7\n\n🎯 Делаем бизнес с Китаем легким!",
-        "uz": "ℹ️ <b>China Agent Bot Haqida</b>\n\n🇨🇳 Biz Xitoydagi biznes uchun ishonchli hamkoringizmiz.\n\n✅ 10+ yil tajriba\n✅ 1000+ mamnun mijozlar\n✅ Professional jamoa\n✅ 24/7 qo'llab-quvvatlash\n\n🎯 Xitoy bilan biznesni oson qilamiz!"
+        "en": "ℹ️ <b>About China Agent Bot</b>\n\n🇨🇳 We are your trusted partner for all business activities in China.\n\n✅ 5+ years experience\n✅ 200+ satisfied clients\n✅ Professional team\n✅ 24/7 support\n\n🎯 Making China business easy!",
+        "ru": "ℹ️ <b>О China Agent Bot</b>\n\n🇨🇳 Мы - ваш надежный партнер для бизнеса в Китае.\n\n✅ 5+ лет опыта\n✅ 200+ довольных клиентов\n✅ Профессиональная команда\n✅ Поддержка 24/7\n\n🎯 Делаем бизнес с Китаем легким!",
+        "uz": "ℹ️ <b>China Agent Bot Haqida</b>\n\n🇨🇳 Biz Xitoydagi biznes uchun ishonchli hamkoringizmiz.\n\n✅ 5+ yil tajriba\n✅ 200+ mamnun mijozlar\n✅ Professional jamoa\n✅ 24/7 qo'llab-quvvatlash\n\n🎯 Xitoy bilan biznesni oson qilamiz!"
     },
     "help": {
         "en": "❓ <b>Help</b>\n\n<b>Commands:</b>\n/start - Restart bot\n/menu - Main menu\n/help - This message\n/contact - Contact info\n/pricing - Our prices\n/about - About us\n\n<b>Tips:</b>\n• Use menu buttons for navigation\n• Send requests anytime\n• Change language in settings",
@@ -176,7 +176,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if user_id not in user_languages:
         update_stats("total_users")
     keyboard = ReplyKeyboardMarkup(LANG_BUTTONS, resize_keyboard=True)
-    await update.message.reply_text(TEXTS["start"]["en"], reply_markup=keyboard, parse_mode="HTML")
+    start_text = "👋 Welcome! / Xush kelibsiz! / Добро пожаловать!\n\nPlease select your language / Iltimos, tilni tanlang / Пожалуйста, выберите язык:"
+    await update.message.reply_text(start_text, reply_markup=keyboard, parse_mode="HTML")
+
 
 async def menu_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = str(update.effective_user.id)
