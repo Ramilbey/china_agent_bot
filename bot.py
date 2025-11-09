@@ -178,7 +178,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if user_id not in user_languages:
         update_stats("total_users")
     keyboard = ReplyKeyboardMarkup(LANG_BUTTONS, resize_keyboard=True)
-    start_text = "👋 Xush kelibsiz! / Добро пожаловать! / Welcome! \n\nIltimos, tilni tanlang / Пожалуйста, выберите язык / Please select your language: "
+    start_text = "👋 Xush kelibsiz! / Добро пожаловать! / Welcome! \n\nIltimos, tilni tanlang \n\n Пожалуйста, выберите язык \n\n Please select your language: "
     await update.message.reply_text(start_text, reply_markup=keyboard, parse_mode="HTML")
 
 
