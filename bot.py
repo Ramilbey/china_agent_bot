@@ -87,9 +87,9 @@ TEXTS = {
             "uz": "🔍 <b>Mahsulot Qidirish</b>\n\n✅ Ishlab chiqaruvchi topish\n✅ Sifat nazorati\n✅ Narx muzokara\n✅ Namuna buyurtma\n\n📞 Eng yaxshi Ishonchli ishlab chiqaruvchilar bilan bog‘laymiz!"
         },
         "admission": {
-            "en": "🎓 <b>University Admission</b>\n\n✅ Top universities\n✅ Document preparation\n✅ Visa assistance\n✅ Scholarship guidance\n\n📞 Start your education journey!",
-            "ru": "🎓 <b>Поступление в Университет</b>\n\n✅ Лучшие университеты\n✅ Подготовка документов\n✅ Помощь с визой\n✅ Стипендии\n\n📞 Начните учебу в Китае здесь.",
-            "uz": "🎓 <b>Universitetga Kirish</b>\n\n✅ Top universitetlar\n✅ Hujjat tayyorlash\n✅ Viza yordami\n✅ Grant yo'nalishi\n\n📞 Ta'lim sayohatingizni boshlang!"
+            "en": "🎓 <b>University Admission</b>\n\n✅ Top universities\n✅ Document preparation\n✅ Visa assistance\n✅ Scholarship guidance\n\nFor more information, visit: <a href='https://dragonpath.netlify.app/'>dragonpath.netlify.app</a>",
+            "ru": "🎓 <b>Поступление в Университет</b>\n\n✅ Лучшие университеты\n✅ Подготовка документов\n✅ Помощь с визой\n✅ Стипендии\n\nПодробнее: <a href='https://dragonpath.netlify.app/'>dragonpath.netlify.app</a>",
+            "uz": "🎓 <b>Universitetga Kirish</b>\n\n✅ Top universitetlar\n✅ Hujjat tayyorlash\n✅ Viza yordami\n✅ Grant yo'nalishi\n\nBatafsil ma’lumot uchun: <a href='https://dragonpath.netlify.app/'>dragonpath.netlify.app</a>"
         },
         "canton": {
             "en": "🏢 <b>Canton Fair Support</b>\n\n✅ Registration help\n✅ Booth booking\n✅ Interpretation\n✅ Logistics\n\n📞 Make the most of the fair!",
