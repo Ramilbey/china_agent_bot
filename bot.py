@@ -87,9 +87,9 @@ TEXTS = {
             "uz": "🔍 <b>Mahsulot Qidirish</b>\n\n✅ Ishlab chiqaruvchi topish\n✅ Sifat nazorati\n✅ Narx muzokara\n✅ Namuna buyurtma\n\n📞 Eng yaxshi Ishonchli ishlab chiqaruvchilar bilan bog‘laymiz!"
         },
         "admission": {
-            "en": "🎓 <b>University Admission</b>\n\n✅ Top universities\n✅ Document preparation\n✅ Visa assistance\n✅ Scholarship guidance\n\nFor more information, visit:",
-            "ru": "🎓 <b>Поступление в Университет</b>\n\n✅ Лучшие университеты\n✅ Подготовка документов\n✅ Помощь с визой\n✅ Стипендии\n\nПодробнее: ",
-            "uz": "🎓 <b>Universitetga Kirish</b>\n\n✅ Top universitetlar\n✅ Hujjat tayyorlash\n✅ Viza yordami\n✅ Grant yo'nalishi\n\nBatafsil ma’lumot uchun:"
+            "en": "🎓 <b>University Admission</b>\n\n✅ Top universities\n✅ Document preparation\n✅ Visa assistance\n✅ Scholarship guidance\n\n📸 Follow us for updates: [Instagram](https://www.instagram.com/dragon.path/)\n\nFor more information, visit:",
+            "ru": "🎓 <b>Поступление в Университет</b>\n\n✅ Лучшие университеты\n✅ Подготовка документов\n✅ Помощь с визой\n✅ Стипендии\n\n 📸 Следите за обновлениями: [Instagram](https://www.instagram.com/dragon.path/) \n\nПодробнее: ",
+            "uz": "🎓 <b>Universitetga Kirish</b>\n\n✅ Top universitetlar\n✅ Hujjat tayyorlash\n✅ Viza yordami\n✅ Grant yo'nalishi\n\n 📸 Yangiliklar uchun: [Instagram](https://www.instagram.com/dragon.path/)\n\nBatafsil ma’lumot uchun:"
         },
         "canton": {
             "en": "🏢 <b>Canton Fair Support</b>\n\n✅ Registration help\n✅ Booth booking\n✅ Interpretation\n✅ Logistics\n\n📞 Make the most of the fair!",
@@ -103,9 +103,9 @@ TEXTS = {
         }
     },
     "contact": {
-        "en": "📞 <b>Contact Us:</b>\n\n📱 Phone: +86 123 456 7890\n✉️ Email: info@chinaagent.com\n💬 WeChat: ChinaAgent\n\n🕐 Working hours: 9:00-18:00 (Beijing Time)",
-        "ru": "📞 <b>Контакты:</b>\n\n📱 Телефон: +86 123 456 7890\n✉️ Email: info@chinaagent.com\n💬 WeChat: ChinaAgent\n\n🕐 Рабочие часы: 9:00-18:00 (Пекинское время)",
-        "uz": "📞 <b>Aloqa:</b>\n\n📱 Telefon: +86 123 456 7890\n✉️ Email: info@chinaagent.com\n💬 WeChat: ChinaAgent\n\n🕐 Ish vaqti: 9:00-18:00 (Pekin vaqti)"
+        "en": "📞 <b>Contact Us:</b>\n\n📱 Telegram: @suhrob_sedali\n\n🕐 Working hours: 9:00-18:00 (Beijing Time)",
+        "ru": "📞 <b>Контакты:</b>\n\n📱 телеграм: @suhrob_sedali\n\n🕐 Рабочие часы: 9:00-18:00 (Пекинское время)",
+        "uz": "📞 <b>Aloqa:</b>\n\n📱 Telelgram: @suhrob_sedali\n\n🕐 Ish vaqti: 9:00-18:00 (Pekin vaqti)"
     },
     "pricing": {
         "en": "💼 <b>Our Pricing:</b>\n\n🔤 Translation: From $50\n🔍 Sourcing: 5% of order\n🎓 Admission: $500\n🏢 Canton Fair: Custom\n🚚 Logistics: Based on provider\n\n📝 Send request for detailed quote",
