@@ -77,18 +77,18 @@ TEXTS = {
     },
     "service_details": {
         "translation": {
-            "en": "🔤 <b>Translation Services</b>\n\n✅ Documents\n✅ Contracts\n✅ Business meetings\n✅ Live interpretation\n\n📞 Contact us for pricing",
-            "ru": "🔤 <b>Услуги Перевода</b>\n\n✅ Документы\n✅ Контракты\n✅ Деловые встречи\n✅ Синхронный перевод\n\n📞 Свяжитесь для уточнения цен",
-            "uz": "🔤 <b>Tarjima Xizmatlari</b>\n\n✅ Hujjatlar\n✅ Shartnomalar\n✅ Biznes uchrashuvlar\n✅ Jonli tarjima\n\n📞 Narxlar uchun bog'laning"
+           "en": "🔤 <b>Translation Support</b>\n\n✅ Live interpretation\n✅ Business calls or meetings\n✅ Factory visits\n\n📞 Contact us to schedule an interpreter.",
+            "ru": "🔤 <b>Устный Перевод</b>\n\n✅ Перевод встреч\n✅ Бизнес-звонки\n✅ Визиты на фабрики\n\n📞 Свяжитесь для бронирования переводчика.",
+            "uz": "🔤 <b>Tarjima Yordami</b>\n\n✅ Uchrashuv tarjimasi\n✅ Biznes qo‘ng‘iroqlar\n✅ Zavod tashrifi tarjimasi\n\n📞 Tarjimon band qilish uchun bog‘laning."
         },
         "sourcing": {
-            "en": "🔍 <b>Product Sourcing</b>\n\n✅ Find manufacturers\n✅ Quality control\n✅ Price negotiation\n✅ Sample ordering\n\n📞 Let's find your perfect supplier!",
-            "ru": "🔍 <b>Поиск Товаров</b>\n\n✅ Поиск производителей\n✅ Контроль качества\n✅ Переговоры о цене\n✅ Заказ образцов\n\n📞 Найдем идеального поставщика!",
-            "uz": "🔍 <b>Mahsulot Qidirish</b>\n\n✅ Ishlab chiqaruvchi topish\n✅ Sifat nazorati\n✅ Narx muzokara\n✅ Namuna buyurtma\n\n📞 Eng yaxshi yetkazib beruvchini topamiz!"
+            "en": "🔍 <b>Product Sourcing</b>\n\n✅ Find manufacturers\n✅ Quality control\n✅ Price negotiation\n✅ Sample ordering\n\n📞 We connect you direcly with reliable suppliers.",
+            "ru": "🔍 <b>Поиск Товаров</b>\n\n✅ Поиск производителей\n✅ Контроль качества\n✅ Переговоры о цене\n✅ Заказ образцов\n\n📞 Мы связываем вас с надежными поставщиками",
+            "uz": "🔍 <b>Mahsulot Qidirish</b>\n\n✅ Ishlab chiqaruvchi topish\n✅ Sifat nazorati\n✅ Narx muzokara\n✅ Namuna buyurtma\n\n📞 Eng yaxshi Ishonchli ishlab chiqaruvchilar bilan bog‘laymiz!"
         },
         "admission": {
             "en": "🎓 <b>University Admission</b>\n\n✅ Top universities\n✅ Document preparation\n✅ Visa assistance\n✅ Scholarship guidance\n\n📞 Start your education journey!",
-            "ru": "🎓 <b>Поступление в Университет</b>\n\n✅ Лучшие университеты\n✅ Подготовка документов\n✅ Помощь с визой\n✅ Стипендии\n\n📞 Начните свое образование!",
+            "ru": "🎓 <b>Поступление в Университет</b>\n\n✅ Лучшие университеты\n✅ Подготовка документов\n✅ Помощь с визой\n✅ Стипендии\n\n📞 Начните учебу в Китае здесь.",
             "uz": "🎓 <b>Universitetga Kirish</b>\n\n✅ Top universitetlar\n✅ Hujjat tayyorlash\n✅ Viza yordami\n✅ Grant yo'nalishi\n\n📞 Ta'lim sayohatingizni boshlang!"
         },
         "canton": {
@@ -97,9 +97,9 @@ TEXTS = {
             "uz": "🏢 <b>Kanton Yarmarkasi</b>\n\n✅ Ro'yxatdan o'tish\n✅ Stend bron qilish\n✅ Tarjimon\n✅ Logistika\n\n📞 Yarmarkadan maksimal foydalaning!"
         },
         "logistics": {
-            "en": "🚚 <b>Logistics Services</b>\n\n✅ Air/Sea freight\n✅ Customs clearance\n✅ Warehousing\n✅ Door-to-door delivery\n\n📞 Safe and fast shipping!",
-            "ru": "🚚 <b>Логистические Услуги</b>\n\n✅ Авиа/морские перевозки\n✅ Таможенное оформление\n✅ Складирование\n✅ Доставка до двери\n\n📞 Безопасная и быстрая доставка!",
-            "uz": "🚚 <b>Logistika Xizmatlari</b>\n\n✅ Havo/Dengiz tashish\n✅ Bojxona rasmiylashtiruvi\n✅ Omborxona\n✅ Uyigacha yetkazish\n\n📞 Xavfsiz va tez yetkazib berish!"
+            "en": "🚚 <b>Logistics Assistance</b>\n\n✅ Find trusted shipping partners\n✅ Compare multiple offers\n✅ Customs and delivery coordination\n\nWe help you choose the best route and price.",
+            "ru": "🚚 <b>Помощь с Логистикой</b>\n\n✅ Подбор надежных перевозчиков\n✅ Сравнение цен и условий\n✅ Таможня и доставка\n\nПомогаем выбрать лучший вариант доставки.",
+            "uz": "🚚 <b>Logistika Yordami</b>\n\n✅ Ishonchli logistlarni topish\n✅ Bir nechta takliflarni solishtirish\n✅ Bojxona va yetkazib berish nazorati\n\nEng yaxshi yo‘l va narxni tanlashda yordam beramiz."
         }
     },
     "contact": {
@@ -108,9 +108,9 @@ TEXTS = {
         "uz": "📞 <b>Aloqa:</b>\n\n📱 Telefon: +86 123 456 7890\n✉️ Email: info@chinaagent.com\n💬 WeChat: ChinaAgent\n\n🕐 Ish vaqti: 9:00-18:00 (Pekin vaqti)"
     },
     "pricing": {
-        "en": "💼 <b>Our Pricing:</b>\n\n🔤 Translation: From $50\n🔍 Sourcing: 5% of order\n🎓 Admission: $500\n🏢 Canton Fair: Custom\n🚚 Logistics: Based on weight\n\n📝 Send request for detailed quote",
-        "ru": "💼 <b>Цены:</b>\n\n🔤 Перевод: От $50\n🔍 Поиск: 5% от заказа\n🎓 Поступление: $500\n🏢 Кантон: Индивидуально\n🚚 Логистика: По весу\n\n📝 Отправьте запрос для детальной оценки",
-        "uz": "💼 <b>Narxlar:</b>\n\n🔤 Tarjima: $50 dan\n🔍 Qidirish: Buyurtmaning 5%\n🎓 Kirish: $500\n🏢 Kanton: Maxsus\n🚚 Logistika: Og'irlikka qarab\n\n📝 Batafsil narx uchun so'rov yuboring"
+        "en": "💼 <b>Our Pricing:</b>\n\n🔤 Translation: From $50\n🔍 Sourcing: 5% of order\n🎓 Admission: $500\n🏢 Canton Fair: Custom\n🚚 Logistics: Based on provider\n\n📝 Send request for detailed quote",
+        "ru": "💼 <b>Цены:</b>\n\n🔤 Перевод: От $50\n🔍 Поиск: 5% от заказа\n🎓 Поступление: $500\n🏢 Кантон: Индивидуально\n🚚 Логистика: зависит от компании \n\n📝 Отправьте запрос для детальной оценки",
+        "uz": "💼 <b>Narxlar:</b>\n\n🔤 Tarjima: $50 dan\n🔍 Qidirish: Buyurtmaning 5%\n🎓 Kirish: $500\n🏢 Kanton: Kelishiladi\n🚚 Logistika: kompaniyaga qarab \n\n📝 Batafsil narx uchun so'rov yuboring"
     },
     "about": {
         "en": "ℹ️ <b>About China Agent Bot</b>\n\n🇨🇳 We are your trusted partner for all business activities in China.\n\n✅ 5+ years experience\n✅ 200+ satisfied clients\n✅ Professional team\n✅ 24/7 support\n\n🎯 Making China business easy!",
