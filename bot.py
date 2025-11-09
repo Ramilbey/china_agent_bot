@@ -110,7 +110,7 @@ TEXTS = {
     "pricing": {
         "en": "💼 <b>Our Pricing:</b>\n\n🔤 Translation: From $50\n🔍 Sourcing: 5% of order\n🎓 Admission: $500\n🏢 Canton Fair: Custom\n🚚 Logistics: Based on provider\n\n📝 Send request for detailed quote",
         "ru": "💼 <b>Цены:</b>\n\n🔤 Перевод: От $50\n🔍 Поиск: 5% от заказа\n🎓 Поступление: $500\n🏢 Кантон: Индивидуально\n🚚 Логистика: зависит от компании \n\n📝 Отправьте запрос для детальной оценки",
-        "uz": "💼 <b>Narxlar:</b>\n\n🔤 Tarjima: $50 dan\n🔍 Qidirish: Buyurtmaning 5%\n🎓 Kirish: $500\n🏢 Kanton: Kelishiladi\n🚚 Logistika: kompaniyaga qarab \n\n📝 Batafsil narx uchun so'rov yuboring"
+        "uz": "💼 <b>Narxlar:</b>\n\n🔤 Tarjima: $50 dan\n🔍 Qidirish: Buyurtmaning 5%\n🎓 O'qishga Kirish: $500\n🏢 Kanton Bozori: Kelishiladi\n🚚 Logistika Topish: kompaniyaga qarab \n\n📝 Batafsil narx uchun so'rov yuboring"
     },
     "about": {
         "en": "ℹ️ <b>About China Agent Bot</b>\n\n🇨🇳 We are your trusted partner for all business activities in China.\n\n✅ 5+ years experience\n✅ 200+ satisfied clients\n✅ Professional team\n✅ 24/7 support\n\n🎯 Making China business easy!",
