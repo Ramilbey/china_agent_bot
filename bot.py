@@ -87,9 +87,9 @@ TEXTS = {
             "uz": "🔍 <b>Mahsulot Qidirish</b>\n\n✅ Ishlab chiqaruvchi topish\n✅ Sifat nazorati\n✅ Narx muzokara\n✅ Namuna buyurtma\n\n📞 Eng yaxshi Ishonchli ishlab chiqaruvchilar bilan bog‘laymiz!"
         },
         "admission": {
-            "en": "🎓 <b>University Admission</b>\n\n✅ Top universities\n✅ Document preparation\n✅ Visa assistance\n✅ Scholarship guidance\n\nFor more information, visit: <a href='https://dragonpath.netlify.app/'>dragonpath.netlify.app</a>",
-            "ru": "🎓 <b>Поступление в Университет</b>\n\n✅ Лучшие университеты\n✅ Подготовка документов\n✅ Помощь с визой\n✅ Стипендии\n\nПодробнее: <a href='https://dragonpath.netlify.app/'>dragonpath.netlify.app</a>",
-            "uz": "🎓 <b>Universitetga Kirish</b>\n\n✅ Top universitetlar\n✅ Hujjat tayyorlash\n✅ Viza yordami\n✅ Grant yo'nalishi\n\nBatafsil ma’lumot uchun: <a href='https://dragonpath.netlify.app/'>dragonpath.netlify.app</a>"
+            "en": "🎓 <b>University Admission</b>\n\n✅ Top universities\n✅ Document preparation\n✅ Visa assistance\n✅ Scholarship guidance\n\nFor more information, visit:",
+            "ru": "🎓 <b>Поступление в Университет</b>\n\n✅ Лучшие университеты\n✅ Подготовка документов\n✅ Помощь с визой\n✅ Стипендии\n\nПодробнее: ",
+            "uz": "🎓 <b>Universitetga Kirish</b>\n\n✅ Top universitetlar\n✅ Hujjat tayyorlash\n✅ Viza yordami\n✅ Grant yo'nalishi\n\nBatafsil ma’lumot uchun:"
         },
         "canton": {
             "en": "🏢 <b>Canton Fair Support</b>\n\n✅ Registration help\n✅ Booth booking\n✅ Interpretation\n✅ Logistics\n\n📞 Make the most of the fair!",
@@ -252,18 +252,32 @@ async def handle_service_selection(update: Update, context: ContextTypes.DEFAULT
     service_key = service_mapping[lang].get(text)
     
     if service_key == "back":
-        await update.message.reply_text("📋 Main menu", reply_markup=get_menu_markup(lang))
+    await update.message.reply_text("📋 Main menu", reply_markup=get_menu_markup(lang))
+
     elif service_key in TEXTS["service_details"]:
-        await update.message.reply_text(
-            TEXTS["service_details"][service_key][lang],
-            parse_mode="HTML",
-            reply_markup=get_services_markup(lang)
-        )
+        if service_key == "admission":
+            # Inline button for the Admission page
+            keyboard = InlineKeyboardMarkup([
+                [InlineKeyboardButton("🌐 Visit Website", url="https://dragonpath.netlify.app/")]
+            ])
+            await update.message.reply_text(
+                TEXTS["service_details"][service_key][lang],
+                parse_mode="HTML",
+                reply_markup=keyboard
+            )
+        else:
+            await update.message.reply_text(
+                TEXTS["service_details"][service_key][lang],
+                parse_mode="HTML",
+                reply_markup=get_services_markup(lang)
+            )
+
     else:
         await update.message.reply_text(
             "❌ Service not found. Please try again.",
             reply_markup=get_menu_markup(lang)
         )
+
 
 # Request conversation
 async def request_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
