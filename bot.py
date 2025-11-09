@@ -1,6 +1,8 @@
 import json
 import os
 import logging
+import asyncio
+import httpx
 from html import escape
 from datetime import datetime
 from dotenv import load_dotenv
@@ -396,6 +398,29 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
     logger.info("🤖 China Agent Bot is running on webhook mode...")
+
+    import asyncio, httpx
+
+    async def self_ping():
+        url = os.getenv("SELF_URL")
+        if not url:
+            logger.warning("⚠️ SELF_URL not set, skipping self-ping.")
+            return
+        async with httpx.AsyncClient() as client:
+            while True:
+                try:
+                    await client.get(url)
+                    logger.debug("Pinged self successfully.")
+                except Exception as e:
+                    logger.error(f"Ping failed: {e}")
+                await asyncio.sleep(300)  # every 5 minutes
+
+    async def run_self_ping(app):
+        asyncio.create_task(self_ping())
+
+    app.post_init = run_self_ping
+    
+    
 
     PORT = int(os.environ.get("PORT", 10000))
     WEBHOOK_URL = os.environ.get("WEBHOOK_URL")
